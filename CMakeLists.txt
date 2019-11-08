@@ -5,6 +5,9 @@ project(cuq LANGUAGES CXX CUDA)
 
 set(CMAKE_CUDA_STANDARD 14)
 
+find_package(CUDA REQUIRED)
+include_directories("${CUDA_INCLUDE_DIRS}")
+
 set(CMAKE_CUDA_FLAGS "-lineinfo")
 
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Xcompiler -Werror") #flags to host compiler behind the nvcc
