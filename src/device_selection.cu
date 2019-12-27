@@ -76,13 +76,15 @@ vector<int> readCudaVisibleDevices() {
 
     // cout << "readCudaVisibleDevices:, i: " << i << endl;
 
-    if (ss.peek() == ',' || ss.peek() == '"' || ss.peek() == '\'')
+    if (ss.peek() == ',' || ss.peek() == '"' || ss.peek() == '\'') {
+      cout << res.at(j) << ' ';
       ss.ignore();
+    }
   }
   
   cout << "\n\n============================\n\n";
-  for (int i = 0; i < res.size(); i++) {
-		cout << res.at(i) << ' ';
+  for (int j = 0; j < res.size(); j++) {
+		cout << res.at(j) << ' ';
 	}
   cout << "\n\n============================\n\n";
   
