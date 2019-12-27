@@ -77,7 +77,7 @@ vector<int> readCudaVisibleDevices() {
     // cout << "readCudaVisibleDevices:, i: " << i << endl;
 
     if (ss.peek() == ',' || ss.peek() == '"' || ss.peek() == '\'') {
-      cout << res.at(j) << ' ';
+      cout << ss.peek() << ' ';
       ss.ignore();
     }
   }
