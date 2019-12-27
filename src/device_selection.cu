@@ -61,32 +61,32 @@ vector<int> readCudaVisibleDevices() {
   res.push_back(0);
   res.push_back(1);
 
-  auto rawValue = std::getenv("CUDA_VISIBLE_DEVICES");
+  //auto rawValue = std::getenv("CUDA_VISIBLE_DEVICES");
 
-  cout << "\n\n============================\n\n";
-  cout << "rawValue = " << rawValue << endl;
-  cout << "\n\n============================\n\n";
+  //cout << "\n\n============================\n\n";
+  //cout << "rawValue = " << rawValue << endl;
+  //cout << "\n\n============================\n\n";
 
-  if (!rawValue)
-    return res.at(0);
+  //if (!rawValue)
+  //  return res.at(0);
 
-  string visibleDevices = string(rawValue);
-  stringstream ss(visibleDevices);
+  //string visibleDevices = string(rawValue);
+  //stringstream ss(visibleDevices);
 
-  if (ss.peek() == '"' || ss.peek() == '\'')
-    ss.ignore();
+  //if (ss.peek() == '"' || ss.peek() == '\'')
+  //  ss.ignore();
 
-  int i;
-  while (ss >> i){
-    res.push_back(i);
+  //int i;
+  //while (ss >> i){
+  //  res.push_back(i);
 
     // cout << "readCudaVisibleDevices:, i: " << i << endl;
 
-    if (ss.peek() == ',' || ss.peek() == '"' || ss.peek() == '\'') {
-      cout << ss.peek() << ' ';
-      ss.ignore();
-    }
-  }
+   // if (ss.peek() == ',' || ss.peek() == '"' || ss.peek() == '\'') {
+    //  cout << ss.peek() << ' ';
+    //  ss.ignore();
+   // }
+ // }
   
 //  cout << "\n\n============================\n\n";
 //  for (int j = 0; j < res.size(); j++) {
@@ -94,7 +94,7 @@ vector<int> readCudaVisibleDevices() {
 //	}
 //  cout << "\n\n============================\n\n";
   
-  return res.at(1);
+  return res;
 }
 
 pair<vector<int>, bool> getAvailableDevices() {
