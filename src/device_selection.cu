@@ -68,7 +68,7 @@ vector<int> readCudaVisibleDevices() {
   cout << "\n\n============================\n\n";
 
   if (!rawValue)
-    return res[0];
+    return res.at(0);
 
   string visibleDevices = string(rawValue);
   stringstream ss(visibleDevices);
@@ -94,7 +94,7 @@ vector<int> readCudaVisibleDevices() {
 //	}
 //  cout << "\n\n============================\n\n";
   
-  return res[1];
+  return res.at(1);
 }
 
 pair<vector<int>, bool> getAvailableDevices() {
