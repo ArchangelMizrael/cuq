@@ -62,7 +62,8 @@ vector<int> readCudaVisibleDevices() {
   auto rawValue = std::getenv("CUDA_VISIBLE_DEVICES");
 
   cout << "\n\n============================\n\n";
-  
+  cout << "rawValue = " << rawValue;
+
   if (!rawValue)
     return res;
 
