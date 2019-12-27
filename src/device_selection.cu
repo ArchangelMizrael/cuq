@@ -58,6 +58,8 @@ vector<int> getAllPhysicallyAvailableDevices() {
 
 vector<int> readCudaVisibleDevices() {
   vector<int> res;
+  res.push_back(0);
+  res.push_back(1);
 
   auto rawValue = std::getenv("CUDA_VISIBLE_DEVICES");
 
@@ -66,7 +68,7 @@ vector<int> readCudaVisibleDevices() {
   cout << "\n\n============================\n\n";
 
   if (!rawValue)
-    return res;
+    return res[0];
 
   string visibleDevices = string(rawValue);
   stringstream ss(visibleDevices);
@@ -86,13 +88,13 @@ vector<int> readCudaVisibleDevices() {
     }
   }
   
-  cout << "\n\n============================\n\n";
-  for (int j = 0; j < res.size(); j++) {
-		cout << res.at(j) << ' ';
-	}
-  cout << "\n\n============================\n\n";
+//  cout << "\n\n============================\n\n";
+//  for (int j = 0; j < res.size(); j++) {
+//		cout << res.at(j) << ' ';
+//	}
+//  cout << "\n\n============================\n\n";
   
-  return res;
+  return res[1];
 }
 
 pair<vector<int>, bool> getAvailableDevices() {
