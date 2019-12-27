@@ -63,6 +63,7 @@ vector<int> readCudaVisibleDevices() {
 
   cout << "\n\n============================\n\n";
   cout << "rawValue = " << rawValue << endl;
+  cout << "\n\n============================\n\n";
 
   if (!rawValue)
     return res;
