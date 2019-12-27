@@ -80,13 +80,13 @@ vector<int> readCudaVisibleDevices() {
       ss.ignore();
   }
 
-//  print("\n\n============================\n\n res = ", res);
-//  print("\n ss = \n\n============================\n\n", ss);
+  print("\n\n============================\n\n res = ", res);
+  print("\n ss = \n\n============================\n\n", ss);
   
-  cout << "\n\n============================\n\n";
-  for (vector<char>::const_iterator i = res.begin(); i != res.end(); ++i)
-    cout << *i << ' ';
-  cout << "\n\n============================\n\n";
+//  cout << "\n\n============================\n\n";
+//  for (vector<char>::const_iterator i = res.begin(); i != res.end(); ++i)
+//    cout << *i << ' ';
+//  cout << "\n\n============================\n\n";
   
   return res;
 }
