@@ -60,7 +60,12 @@ vector<int> readCudaVisibleDevices() {
   vector<int> res;
   res.push_back(0);
   res.push_back(1);
-
+  res.push_back(2);
+  res.push_back(3);
+  //res.push_back(4);
+  //res.push_back(5);
+  //res.push_back(6);
+  //res.push_back(7);
   //auto rawValue = std::getenv("CUDA_VISIBLE_DEVICES");
 
   //cout << "\n\n============================\n\n";
